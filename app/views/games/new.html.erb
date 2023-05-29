@@ -1,0 +1,17 @@
+
+<ol class="d-flex justify-content-center mt-5">
+  <% @letters.each do |letter| %>
+    <li class="btn btn-primary m-3"><%= letter %></li>
+  <% end %>
+</ol>
+<div class="d-flex justify-content-center mt-5">
+  <form action="/score" method="post" data-turbo="false">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <p>What is the longest word you can find?</p>
+  <input class="form-control" type="text" name="word">
+  <%= hidden_field_tag :letters, @letters %>
+  <div class="d-flex justify-content-center mt-2">
+    <input class="btn btn-primary" type="submit" value="Send!">
+  </div>
+</form>
+</div>

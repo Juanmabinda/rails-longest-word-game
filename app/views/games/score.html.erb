@@ -1,0 +1,11 @@
+<ol class="d-flex justify-content-center mt-5">
+  <% @letters.each do |letter| %>
+    <li class="btn btn-primary m-3"><%= letter %></li>
+  <% end %>
+</ol>
+<div class="d-flex justify-content-center mt-5">
+  <h4>Your word: <%= @try.join() %></h4>
+</div>
+ <div class="d-flex justify-content-center mt-5">
+  <h5><%= @message %></h5>
+</div>
